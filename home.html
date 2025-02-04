@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Just travel.com</title>
+    <style>
+      .bg-img {
+        height: 100vh;
+        background-image: url("travel.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+      }
+
+      nav {
+        background: #537495;
+        padding: 15px;
+        position: relative;
+        z-index: 1000;
+      }
+
+      #menu {
+        list-style: none;
+        padding: 0%;
+        background: #4d4188;
+        width: 200px;
+        position: absolute;         
+        top: 50px;
+        left: 10px;
+        display: none;
+        border-radius: 5px;
+        z-index: 1002;
+      }
+
+      .menu-icon {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        text-align: left;
+        z-index: 1001;
+      }
+
+      #menu li {
+        padding: 10px;
+        text-align: center;
+      }
+
+      #menu li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+      }
+
+      #menu li:hover {
+        background: #555;
+      }
+
+      #menu.show {
+        display: block;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #1d5c77;
+        color: rgb(231, 227, 240);
+      }
+
+      header img {
+        height: 99px;
+        margin-right: 125px;
+        border-radius: 50%;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 4.5rem;
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .section {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #a7bfd6;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.7);
+        transition: all transform 0.3s ease-in-out;
+      }
+
+      .section a:hover {
+        transform: scale(1.0);
+      }
+
+      .section1 {
+        background: url('https://i.pinimg.com/736x/83/ec/73/83ec73ddbbea7bf7588219d63313d7c6.jpg') no-repeat top center;
+        background-size: cover;
+      }
+
+      .section2 {
+        background: url('https://img.freepik.com/premium-photo/monumental-statue-unity-india-dedicated-sardar-vallabhbhai-patel_1327465-62440.jpg') no-repeat top center;
+        background-size: cover;
+      }
+
+      .section3 {
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSri0xVDzLeyxx19ndeB8psxJKSpPHODRnPgGwnB4oC5PJt0QpKuKcpllQUq4BJ4h3Yx94&usqp=CAU') no-repeat top center;
+        background-size: cover;
+      }
+
+      .section1:hover,
+      .section2:hover,
+      .section3:hover {
+        transform: scale(1.1);
+      }
+
+      .content {
+        padding: 50px;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 10px gray;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .content h2 {
+        text-align: center;
+      }
+
+      .glowing-border {
+        box-shadow: 0 0 10px 5px rgba(129, 178, 195, 0.7), 0 0 20px 10px rgba(173, 216, 230, 0.7);
+      }
+
+      #about {
+        background: linear-gradient(to right, #e0bbf4, #d6a7f5);
+      }
+
+      #moto {
+        background-color: #d0abab;/*lightred*/
+      }
+
+      #testimonials {
+        background-color: #acd9b4;}/*lightgreen*/
+
+      #testimonials.glowing-border {
+        box-shadow: 0 0 10px 5px rgba(173, 216, 230, 0.7), 0 0 20px 10px rgba(173, 216, 230, 0.7);
+      }
+
+      footer {
+        background-color: rgb(177, 162, 198);
+        padding: 20px;
+        text-align: center;
+        color: #000000;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body style="font-family: Rakkas, sans-serif; margin: 0px;">
+    <header>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9WlElXAuGApOlCPTCVBfkrKDXpE-qdbk8qw&s" alt="logo">
+      <h1>CULTURAL BITES AND STORIES</h1>
+    </header>
+    <nav>
+      <div class="menu-icon" onclick="toggleMenu()">
+        &#9776;
+      </div>
+      <ul id="menu">
+        <li><a href="kashmir.html">KASHMIR</a></li>
+        <li><a href="gujarat.html">GUJARAT</a></li>
+        <li><a href="bihar.html">BIHAR</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="section section1">
+        <a href="#about">KASHMIR</a>
+      </div>
+      <div class="section section2">
+        <a href="#moto">GUJARAT</a>
+      </div>
+      <div class="section section3">
+        <a href="#testimonials">BIHAR</a>
+      </div>
+    </div>
+
+    <div id="about" class="content">
+      <h2>ABOUT KASHMIR</h2>
+      <p>Kashmir, often referred to as "Paradise on Earth," is renowned for its breathtaking landscapes, including snow-capped mountains, lush valleys, and serene lakes like Dal Lake in Srinagar. Tourists flock to Kashmir to experience its vibrant culture, historical sites, and adventure activities such as skiing and trekking. Kashmir remains a major tourist destination, attracting visitors who come for its scenic beauty, culture, and peaceful retreats. The region is also deeply significant for its history, religious diversity, and pilgrimage sites, including Amarnath and Vaishno Devi temples.</p>
+    </div>
+
+    <div id="moto" class="content">
+      <h2>ABOUT GUJARAT</h2>
+      <p>Gujarat is a vibrant blend of history, culture, and natural beauty. The state boasts the Rann of Kutch, famous for its White Salt Desert and the Rann Utsav festival, along with the UNESCO World Heritage site of the Rani ki Vav, an ancient stepwell. Gujarat is also known for its diverse wildlife, with the Gir National Park being home to Asiatic lions, and its rich traditions in textiles, cuisine, and dance.</p>
+    </div>
+
+    <div id="testimonials" class="content">
+      <h2>ABOUT BIHAR</h2>
+      <p>Bihar, one of India's oldest regions, draws pilgrims and history enthusiasts alike. It is home to important Buddhist sites, such as Bodh Gaya, where Lord Buddha attained enlightenment, and Nalanda, the ancient center of learning. Bihar's historical and cultural significance, along with its festivals like Chhath Puja, make it an intriguing destination for those looking to explore India's spiritual and ancient heritage. Each of these states offers something distinct to travelers, from the natural beauty of Kashmir to the cultural richness of Gujarat and the historical depth of Bihar.</p>
+    </div>
+
+    <script>
+      function toggleMenu() {
+        let menu = document.getElementById('menu');
+        menu.classList.toggle('show');
+      }
+
+      function handleScroll() {
+        const sections = document.querySelectorAll('.content');
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+            section.classList.add('glowing-border');
+          } else {
+            section.classList.remove('glowing-border');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+    </script>
+
+    <footer>
+      <p>Contact Us: 
+        <br>
+        Phone: <a href="tel:+917985363500">7985363500</a> | 
+        Email: <a href="mailto:easytravel0718@gmil.com">easytravel0718@gmil.com</a>
+        <br>
+        Follow Us: 
+        <a href="https://twitter.com/easytravel">Twitter</a> | 
+        <a href="https://www.instagram.com/easy-travel_._0718/">Instagram</a> | 
+        <a href="https://www.youtube.com/c/youreasytv">YouTube</a>
+      </p>
+    </footer>
+  </body>
+</html>
